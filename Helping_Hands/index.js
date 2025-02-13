@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-const http = require("http");
+const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { CLIENT_RENEG_LIMIT } = require("tls");
@@ -97,5 +97,5 @@ app.get("/", (req, res) => {
 // Start server
 //const PORT = 3000;
 app.listen(3000, () => {
-    console.log("Server running at http://localhost:3000");
+    console.log("Server running at https://192.168.0.126:3000");
 });
