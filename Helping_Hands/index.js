@@ -14,6 +14,7 @@ app.use(cors());
 const db = mysql.createConnection({
     host: "192.168.0.126",
     user: "root",
+    port: 3306, 
     password: "Rakesh@2001", 
     database: "helpinghands"
 });
@@ -25,26 +26,6 @@ db.connect(err => {
     }
     console.log("Connected to database");
 });
-
-
-// const server = http.createServer((req, res) => {
-//     if (req.url === "/") {
-//         fs.readFile(path.join(__dirname, "index.html"), (err, data) => {
-//             if (err) {
-//                 res.writeHead(500, { "Content-Type": "text/plain" });
-//                 res.end("Internal Server Error");
-//             } else {
-//                 res.writeHead(200, { "Content-Type": "text/html" });
-//                 console.log({data})
-//                 res.end(data);
-//             }
-//         });
-//     } else {
-//         res.writeHead(404, { "Content-Type": "text/plain" });
-//         res.end("Page Not Found");
-//     }
-// });
-
 
 // Get all users
 
